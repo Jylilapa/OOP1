@@ -56,3 +56,13 @@ def product_1():
 @pytest.fixture
 def product_2():
     return Product('55" QLED 4K', "Фоновая подсветка", 123000.0, 7)
+
+
+@pytest.fixture
+def products_new():
+    return Product('45" QLED 4K', "Отличная фоновая подсветка", 133000.0, 5)
+
+
+@pytest.fixture
+def product_3():
+    return Product('55" QLED 4K', "Фоновая подсветка", 0, 7)

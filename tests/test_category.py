@@ -45,3 +45,22 @@ def test_category_3(category_3):
     ]
     assert category_3.count_category == 3
     assert category_3.count_products == 2
+
+
+def test_category_property(category_1):
+    assert category_1.products == [
+        {
+            "name": "Samsung Galaxy C23 Ultra",
+            "description": "256GB, Серый цвет, 200MP камера",
+            "price": 180000.0,
+            "quantity": 5,
+        },
+        {"name": "Iphone 15", "description": "512GB, Gray space", "price": 210000.0, "quantity": 8},
+        {"name": "Xiaomi Redmi Note 11", "description": "1024GB, Синий", "price": 31000.0, "quantity": 14},
+    ]
+
+
+def test_category_app(category_1, products_new):
+    assert category_1.count_products == 3
+    category_1.products = products_new
+    assert category_1.count_products == 4
