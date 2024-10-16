@@ -21,8 +21,8 @@ class Category:
     def products(self):
         return self.__products
 
-    @products.setter
-    def products(self, products_new: Product):
+
+    def add_products(self, products_new: Product):
         self.__products.append(products_new)
 
         Category.count_products += 1

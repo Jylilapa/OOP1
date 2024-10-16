@@ -60,7 +60,7 @@ def test_category_property(category_1):
     ]
 
 
-def test_category_setter(category_1, products_new):
+def test_category_app(category_1, products_new):
     assert category_1.count_products == 3
     category_1.products = products_new
     assert category_1.count_products == 4
