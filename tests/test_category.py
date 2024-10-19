@@ -64,3 +64,7 @@ def test_category_app(category_1, products_new):
     assert category_1.count_products == 3
     category_1.products = products_new
     assert category_1.count_products == 4
+
+
+def test_total_products(category_01):
+    assert str(category_01) == "Смартфоны, количество продуктов: 27 шт."
