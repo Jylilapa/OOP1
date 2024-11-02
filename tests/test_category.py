@@ -76,3 +76,11 @@ def test_total_products(category_01):
 def test_category_app_error(category_1, products_new):
     with pytest.raises(TypeError):
         category_1.products = 1
+
+
+def test_average_price(category_0):
+    assert category_0.average_price() == 195000
+
+
+def test_average_price_empty(category_empty):
+    assert category_empty.average_price() == 0
