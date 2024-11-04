@@ -31,6 +31,15 @@ def category_01(product_smart_1, product_smart_2, product_smart_3):
 
 
 @pytest.fixture
+def category_0(product_smart_1, product_smart_2):
+    return Category(
+        "Смартфоны",
+        "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни",
+        [product_smart_1, product_smart_2],
+    )
+
+
+@pytest.fixture
 def category_1(product_smart_1, product_smart_2, product_smart_3):
     return Category(
         "Смартфоны",
@@ -75,8 +84,22 @@ def category_3():
 
 
 @pytest.fixture
+def category_empty(product_smart_1, product_smart_2, product_smart_3):
+    return Category(
+        "Смартфоны",
+        "Смартфоны, как средство не только коммуникации, но и получение дополнительных функций для удобства жизни",
+        [],
+    )
+
+
+@pytest.fixture
 def product_1():
     return Product("Samsung Galaxy C23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 5)
+
+
+@pytest.fixture
+def product_0():
+    return Product("Samsung Galaxy C23 Ultra", "256GB, Серый цвет, 200MP камера", 180000.0, 0)
 
 
 @pytest.fixture
